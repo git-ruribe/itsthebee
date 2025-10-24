@@ -63,6 +63,21 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Hero background GIF + overlay for legibility */
+        .hero-bg {
+            background-image:
+                radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.05) 0%, rgba(250, 204, 21, 0) 60%),
+                url('hero-bg.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Respect user's reduced motion preference: use static gradient only */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-bg {
+                background-image: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.05) 0%, rgba(250, 204, 21, 0) 60%);
+            }
+        }
     </style>
 </head>
 <body class="bg-brand-dark text-gray-100 antialiased">
@@ -88,7 +103,7 @@
 
     <!-- ==== Hero Section ==== -->
     <main>
-        <section class="min-h-screen flex items-center justify-center text-center pt-20 px-4" style="background-image: radial-gradient(circle at 50% 50%, rgba(250, 204, 21, 0.05) 0%, rgba(250, 204, 21, 0) 60%);">
+        <section class="min-h-screen flex items-center justify-center text-center pt-20 px-4 hero-bg">
             <div class="max-w-4xl">
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-6 animate-fade-in-up" style="animation-delay: 0.1s;">
                     Your Autonomous <span class="hero-gradient">Performance Partner</span>
@@ -235,10 +250,10 @@
                     <span class="inline-block bg-brand-yellow-400/10 text-brand-yellow-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">Our Founder's Story</span>
                     <h3 class="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">From a Legacy of Performance</h3>
                     <p class="text-lg text-gray-300 mb-6">
-                        ItsTheBee.com was founded by <span class="text-white font-semibold">Angela Uribe</span>, a Biomedical Engineer from Tec de Monterrey. Her inspiration wasn't found in a lab, but on the track.
+                        ItsTheBee.com was founded by <span class="text-white font-semibold">Angela Uribe</span>, a Biomimetic Engineer from Tec de Monterrey. Her inspiration wasn't found in a lab, but on the track.
                     </p>
                     <p class="text-lg text-gray-300 mb-6">
-                        In 2032, her grandfather, <span class="text-white font-semibold">Rafael Uribe</span>, stunned the world by becoming the 400m world champion in his category at 60 years old. Rafael trained with obsessive intuition, keeping handwritten journals of his sleep, nutrition, and mood. He understood the *connection* between systems.
+                        In 2032, her grandfather, <span class="text-white font-semibold">Rafael Uribe</span>, stunned the world by becoming the 400m world champion in his category at 60 years old. Rafael trained with obsessive intuition, keeping electronic journals of his training, sleep, nutrition, and mood. He understood the *connection* between systems.
                     </p>
                     <p class="text-lg text-gray-300 mb-6">
                         Angela, watching his relentless pursuit, saw the gap: he was reacting to <span class="text-brand-yellow-400">past</span> data. What if he could have <span class="text-brand-yellow-400">predicted</span> his body's needs in real-time?
@@ -246,7 +261,7 @@
                     <blockquote class="border-l-4 border-brand-yellow-400 pl-6 mt-8">
                         <p class="text-xl italic text-white">
                             "My grandfather proved that peak performance has no age limit. We built 'The Bee' to give everyone the insights to find their own peak, guided by data and inspired by his legacy."
-                        </Cita>
+                        </p>
                         <footer class="mt-4 text-gray-400">— Angela Uribe, Founder & CEO</footer>
                     </blockquote>
                 </div>
