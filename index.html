@@ -72,6 +72,15 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+        /* Sombra para mejorar legibilidad del texto sobre el GIF */
+        .hero-bg h1,
+        .hero-bg p {
+            text-shadow: 0 8px 8px rgba(0,0,0,0.2);
+        }
+        /* Opcional: refuerza el contorno del texto con gradiente */
+        .hero-gradient {
+            -webkit-text-stroke: 0.7px rgba(0,0,0,0.16);
+        }
         /* Respect user's reduced motion preference: use static gradient only */
         @media (prefers-reduced-motion: reduce) {
             .hero-bg {
@@ -275,7 +284,7 @@
                     The future of human performance <span class="hero-gradient">is here</span>.
                 </h2>
                 <p class="mt-6 text-lg leading-8 text-gray-300">
-                    ItsTheBee.com is a research-grade system now available for elite athletes, researchers, and performance pioneers. Secure your autonomous performance partner today.
+                    ItsTheBee.com is a research-grade system for elite athletes, researchers, and performance pioneers. Secure your autonomous performance partner today.
                 </p>
                 <p class="mt-6 text-2xl font-bold text-white">
                     Starting from <span class="text-brand-yellow-400">9.99 BTC</span>
